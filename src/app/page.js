@@ -1,95 +1,141 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import Copy from "@/components/Copy";
+import { ReactLenis, useLenis } from "lenis/react";
+import ImgBlur from "@/components/Img_Blur";
+import BlurText from "@/components/BlurText";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <ReactLenis root>
+        <nav>
+          <div className="col">
+            <div className="sub-col">
+              <BlurText>
+                <span>Greyloom</span>
+              </BlurText>
+            </div>
+            <div className="sub-col">
+              <BlurText>
+                <span>Home</span>
+                <span>Projects</span>
+                <span>About</span>
+                <span>Lab</span>
+              </BlurText>
+            </div>
+          </div>
+          <div className="col">
+            <BlurText>
+              <span>Lets Talk</span>
+            </BlurText>
+          </div>
+        </nav>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <section className="hero">
+          <div className="hero-img">
+            <ImgBlur src="hero.jpg" alt="" />
+          </div>
+          <div className="header">
+            <Copy delay={0.5}>
+              <h1>We craft identities and experiences for the bold.</h1>
+            </Copy>
+          </div>
+        </section>
+        <section className="about">
+          <Copy>
+            {" "}
+            <span>Design & Strategy for the Vision-Driven</span>
+          </Copy>
+          <div className="header">
+            <Copy>
+              {" "}
+              <h1>
+                We partner with founders, innovators, and change-makers to shape
+                brands that resonate. From first lines of code to global
+                launches, we bring focus, elegance and intent to every stage.
+              </h1>
+            </Copy>
+          </div>
+        </section>
+        <section className="about-img">
+          <ImgBlur src="/about.jpg" alt="" />
+        </section>
+
+        <section className="story">
+          <div className="col">
+            <Copy>
+              <h1>
+                The Story Behind <br /> Our Stillness
+              </h1>
+            </Copy>
+          </div>
+          <div className="col">
+            <Copy>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem a officiis aut necessitatibus explicabo sapiente
+                deserunt ad id aspernatur veritatis, unde perferendis modi
+                officia fugiat laudantium exercitationem architecto obcaecati
+                alias animi laborum? Architecto, vitae.
+              </p>
+            </Copy>
+            <Copy>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem a officiis aut necessitatibus explicabo sapiente
+                deserunt ad id aspernatur veritatis, unde perferendis modi
+                officia fugiat laudantium exercitationem architecto obcaecati
+                alias animi laborum? Architecto, vitae.
+              </p>
+            </Copy>
+            <Copy>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem a officiis aut necessitatibus explicabo sapiente
+                deserunt ad id aspernatur veritatis, unde perferendis modi
+                officia fugiat laudantium exercitationem architecto obcaecati
+                alias animi laborum? Architecto, vitae.
+              </p>
+            </Copy>
+          </div>
+        </section>
+        <section className="philosophy">
+          <Copy>
+            {" "}
+            <span>The Thought Beneath</span>
+          </Copy>
+          <div className="header">
+            <Copy>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus aut debitis earum! Fugiat eveniet iure doloribus rem,
+                nisi unde impedit non modi nesciunt reiciendis dicta illo animi
+                incidunt adipisci
+              </h1>
+            </Copy>
+          </div>
+        </section>
+        <footer>
+          <div className="col">
+            <div className="sub-col">
+              <span>Terms & Conditions</span>
+            </div>
+            <div className="sub-col">
+              <Copy>
+                <h1>Twitter</h1>
+                <h1>LinkedIn</h1>
+                <h1>Instagram</h1>
+                <h1>Awwwards</h1>
+                <h1>Email</h1>
+              </Copy>
+            </div>
+          </div>
+          <div className="col">
+            <span>Copyright Greyloom 2025</span>
+          </div>
+        </footer>
+      </ReactLenis>
+    </>
   );
 }
