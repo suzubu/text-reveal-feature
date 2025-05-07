@@ -13,7 +13,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/suzubu/blur-identity.git
+git clone https://github.com/suzubu/text-reveal-feature.git
 
 # 2. Install dependencies
 npm install
