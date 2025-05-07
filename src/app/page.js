@@ -2,21 +2,25 @@
 
 import Copy from "@/components/Copy";
 import { ReactLenis, useLenis } from "lenis/react";
-import ImgBlur from "@/components/Img_Blur";
+import ImgBlur from "@/components/BlurImg";
 import BlurText from "@/components/BlurText";
 
 export default function Home() {
   return (
     <>
+      {/* Lenis scroll wrapper */}
       <ReactLenis root>
+        {/* === NAVIGATION === */}
         <nav>
           <div className="col">
             <div className="sub-col">
+              {/* Site name or logo with blur effect */}
               <BlurText>
                 <span>Greyloom</span>
               </BlurText>
             </div>
             <div className="sub-col">
+              {/* Navigation links with BlurText wrapper */}
               <BlurText>
                 <span>Home</span>
                 <span>Projects</span>
@@ -26,14 +30,17 @@ export default function Home() {
             </div>
           </div>
           <div className="col">
+            {/* Call to action link */}
             <BlurText>
               <span>Lets Talk</span>
             </BlurText>
           </div>
         </nav>
 
+        {/* === HERO SECTION === */}
         <section className="hero">
           <div className="hero-img">
+            {/* Background hero image with blur shader */}
             <ImgBlur src="hero.jpg" alt="" />
           </div>
           <div className="header">
@@ -42,14 +49,14 @@ export default function Home() {
             </Copy>
           </div>
         </section>
+
+        {/* === ABOUT SECTION === */}
         <section className="about">
           <Copy>
-            {" "}
             <span>Design & Strategy for the Vision-Driven</span>
           </Copy>
           <div className="header">
             <Copy>
-              {" "}
               <h1>
                 We partner with founders, innovators, and change-makers to shape
                 brands that resonate. From first lines of code to global
@@ -58,10 +65,13 @@ export default function Home() {
             </Copy>
           </div>
         </section>
+
+        {/* === ABOUT IMAGE SECTION === */}
         <section className="about-img">
           <ImgBlur src="/about.jpg" alt="" />
         </section>
 
+        {/* === STORY SECTION === */}
         <section className="story">
           <div className="col">
             <Copy>
@@ -71,6 +81,7 @@ export default function Home() {
             </Copy>
           </div>
           <div className="col">
+            {/* Repeating story paragraphs */}
             <Copy>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -100,9 +111,10 @@ export default function Home() {
             </Copy>
           </div>
         </section>
+
+        {/* === PHILOSOPHY SECTION === */}
         <section className="philosophy">
           <Copy>
-            {" "}
             <span>The Thought Beneath</span>
           </Copy>
           <div className="header">
@@ -116,6 +128,8 @@ export default function Home() {
             </Copy>
           </div>
         </section>
+
+        {/* === FOOTER === */}
         <footer>
           <div className="col">
             <div className="sub-col">

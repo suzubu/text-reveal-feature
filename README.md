@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌀 Text Reveal Feature + Blur Effects
+> A modern, scroll-enhanced web experience showcasing blurred motion, layered text, and animated copy. Built with Next.js, GSAP, and shader-style visual cues for immersive storytelling.
 
-## Getting Started
+---
 
-First, run the development server:
+## 🖼 Preview
+
+![Blur Identity Demo](media/text-reveal.gif)
+
+---
+
+## ⚙️ Getting Started
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/suzubu/blur-identity.git
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Requires: Node.js, modern browser with CSS filters and WebGL support.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- 🌫️ Scroll-activated text reveal with blur and motion effects
+- 🎞 GSAP-powered timeline animations and easing
+- ✍️ Split-text entrance on lines using `SplitText` plugin
+- 🖼 Image reveal with blur-to-sharp transitions
+- 🧠 Fully componentized layout using Next.js App Router
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Dev Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Components
+- `BlurText.jsx`: Scroll-triggered fade-in with zoom and blur
+- `ImgBlur.jsx`: Blurred image entry using GSAP + CSS filter
+- `Copy.jsx`: Animated line-by-line text reveal via `SplitText`
+- `page.js`: Page scaffold with full layout and GSAP logic
+- `globals.css`: Custom font and utility styling (flex grid, column flow)
 
-## Deploy on Vercel
+### Animation Stack
+- [GSAP](https://greensock.com/gsap/)
+- [ScrollTrigger](https://greensock.com/scrolltrigger/)
+- [SplitText](https://greensock.com/splittext/)
+- [Lenis](https://github.com/studio-freight/lenis) for smooth scroll behavior
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Inspiration / Credits
+- [Codegrid](https://www.youtube.com/watch?v=4A0dP8yMwD8)
+- Aesthetic influence from [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/)
+- Typography motion inspired by [Obys Agency](https://obys.agency/)
+- Animated copy entrance techniques influenced by [Studio Freight](https://studiofreight.com/)
+- Uses [GSAP SplitText](https://greensock.com/splittext/) for granular text control
+
+---
+
+## 📂 Folder Structure
+
+```bash
+text-reveal-feature
+├── public/
+│   └── fonts/
+│   └── about.jpg
+│   └── hero.jpg
+├── src/
+│   └── app/
+│       └── global.css
+│       └── layout.js
+│       └── page.js
+│   └── components/
+│       └── BlurText.jsx
+│       └── Copy.jsx
+│       └── BlurImg.jsx
+└── README.md
+```
+
+---
+
+## 📜 License
+
+MIT — free to remix and adapt with credit.
+
+---
+
+## 🙋‍♀️ Author
+
+Created by [suzubu](https://github.com/suzubu)
