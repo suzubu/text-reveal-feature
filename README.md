@@ -92,4 +92,4 @@ MIT — free to remix and adapt with credit.
 
 ## 🙋‍♀️ Author
 
-Created by [suzubu](https://github.com/suzubu)
+Made with ☕ + 🎧 by [suzubu](https://github.com/suzubu)
