@@ -1,4 +1,4 @@
-# 🌀 Text Reveal Feature + Blur Effects
+# 🌀 Text Reveal Feature + Blur Feature
 > A modern, scroll-enhanced web experience showcasing blurred motion, layered text, and animated copy. Built with Next.js, GSAP, and shader-style visual cues for immersive storytelling.
 
 ---
